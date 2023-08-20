@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <stack>
+#include <vector>
 using namespace std;
 /* Link list Node */
 struct Node {
@@ -18,18 +19,7 @@ struct Node {
 
 
 // } Driver Code Ends
-/*
-struct Node {
-  int data;
-  struct Node *next;
-  Node(int x) {
-    data = x;
-    next = NULL;
-  }
-};
-*/
 
-#include <vector>
 class Solution{
   public:
     //Function to check whether the list is palindrome.
