@@ -34,9 +34,8 @@ Please ensure your code follows good coding practices and includes appropriate c
 
 If you have any questions, suggestions, or just want to connect, feel free to reach out to me:
 
-- GitHub: [Your GitHub Profile](https://github.com/SakshiRai01)
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/sakshi-singh-91716b226/)
+- GitHub: https://github.com/SakshiRai01
+- LinkedIn: https://www.linkedin.com/in/sakshi-singh-91716b226/
 
 Happy coding!
 
