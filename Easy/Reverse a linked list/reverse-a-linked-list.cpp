@@ -38,22 +38,35 @@ class Solution
         // code here
         // return head of reversed list
         
-        if(head == NULL || head->next == NULL)
-        return head;
+        // if(head == NULL || head->next == NULL)
+        // return head;
         
-        Node* prev = NULL;
-        Node* curr = head;
-        Node* forw = NULL;
+        // Node* prev = NULL;
+        // Node* curr = head;
+        // Node* forw = NULL;
         
-        while( curr != NULL)
+        // while( curr != NULL)
+        // {
+        //     forw = curr -> next;
+        //     curr -> next = prev;
+        //     prev = curr;
+        //     curr = forw;
+        // }
+        
+        // return prev;
+        
+        // Recursive Approach
+        
+        if( head == NULL || head -> next == NULL )
         {
-            forw = curr -> next;
-            curr -> next = prev;
-            prev = curr;
-            curr = forw;
+            return head;
         }
         
-        return prev;
+        Node* h1 = reverseList( head -> next );
+        head -> next -> next = head;
+        head -> next = NULL;
+        
+        return h1;
     }
     
 };
