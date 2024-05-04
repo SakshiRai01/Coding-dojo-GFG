@@ -5,24 +5,30 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
   public:
-    vector<int> duplicates(int arr[], int n) {
-        map<int , int> m;
+    vector<int> duplicates(long long arr[], int n) {
         vector<int> ans;
-        for(int i =0 ; i<n; i++)
+        unordered_map<int, int> count;
+        
+        for(int i = 0 ; i < n ; i++)
         {
-            m[arr[i]]++;
+            count[arr[i]]++;
         }
         
-        for(auto i:m)
+        for(auto i : count)
         {
             if(i.second > 1)
-            ans.push_back(i.first);
-            
+            {
+                ans.push_back(i.first);
+            }
         }
         
         if(ans.empty())
-        return {-1};
-        else 
+        {
+            ans.push_back(-1);
+        }
+        
+        sort(ans.begin() , ans.end());
+        
         return ans;
     }
 };
@@ -35,7 +41,7 @@ int main() {
     while (t-- > 0) {
         int n;
         cin >> n;
-        int a[n];
+        long long a[n];
         for (int i = 0; i < n; i++) cin >> a[i];
         Solution obj;
         vector<int> ans = obj.duplicates(a, n);
