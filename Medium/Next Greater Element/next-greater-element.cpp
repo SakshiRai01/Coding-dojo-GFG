@@ -13,18 +13,20 @@ class Solution
         stack<long long>st;
         vector<long long>ans(n,0);
         
-        for(int i=n-1;i>=0;i--)
+        for(int i = n - 1 ; i >= 0 ; i--)
         {
-            while(!st.empty() && st.top()<=arr[i]) 
+            while(!st.empty() && st.top() <= arr[i]) 
                 st.pop();
             
             if(!st.empty()) 
-                ans[i]=st.top();
+                ans[i] = st.top();
+                
             else 
-                ans[i]=-1;
+                ans[i] = -1;
             
             st.push(arr[i]);
         }
+        
         return ans;
     }
 };
